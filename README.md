@@ -12,7 +12,9 @@ The precedure to use it with your own daemon is simple. Just have to edit
 # Process name ( For display )
 NAME=my-daemon
 # Daemon name, where is the actual executable
-DAEMON=/home/user1/my_daemon
+DAEMON="/home/user1/my_daemon"
+# 
+DAEMON_OPTS=""
 # pid file for the daemon
 PIDFILE=/var/run/my_daemon.pid	
 # USER which will run the daemon
@@ -22,6 +24,7 @@ Where:
 
 NAME: is the name of your daemon program.
 DAEMON: is the path to binary file.
+DAEMON_OPTS: options to be passed to daemon program.
 PIDFILE: the path to pid file.
 USER: is the user which will run your daemon. It's always better run a certain 
 	daemon as non-privileged user.
